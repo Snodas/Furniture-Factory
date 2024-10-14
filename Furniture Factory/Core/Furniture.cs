@@ -64,8 +64,8 @@ namespace Furniture_Factory.Core
         Chair,
         Table,
         Ceilinglamp,
-        Coaster,
-        Cutlery,
+        TableLamp,
+        Desk,
     }
 
     

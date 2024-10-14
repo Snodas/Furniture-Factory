@@ -42,7 +42,6 @@ namespace Furniture_Factory.Core
             if (Fabric)
                 description.AppendLine("- Fabric");
 
-            description.AppendLine("Note: WILL BREAK WHEN LEANING BACK!");
             description.AppendLine($"Price: ${CalculateCost():0.00}");
 
             return description.ToString();

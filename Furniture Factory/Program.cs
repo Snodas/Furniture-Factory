@@ -34,7 +34,7 @@ namespace KitchenFurnitureFactory
                 Console.WriteLine("2: Tables");
                 Console.WriteLine("3: Ceilinglamps");
                 Console.WriteLine("4: Coasters");
-                Console.WriteLine("5: Cutlery");
+                Console.WriteLine("5: Desks");
                 Console.WriteLine("6: Show Cart");
                 Console.WriteLine("7: Checkout");
                 Console.WriteLine("8: Show all tables");
@@ -74,18 +74,18 @@ namespace KitchenFurnitureFactory
 
                     case 4:
 
-                        Coaster coaster = new Coaster();
-                        Console.WriteLine(coaster.ToString());
-                        cart.AddToCart(coaster);
+                        TableLamp tableLamp = new TableLamp();
+                        Console.WriteLine(tableLamp.ToString());
+                        cart.AddToCart(tableLamp);
                         Console.ReadKey();
 
                         break;
 
                     case 5:
 
-                        Cutlery cutlery = new Cutlery();
-                        Console.WriteLine(cutlery.ToString());
-                        cart.AddToCart(cutlery);
+                        Desk desk = new Desk();
+                        Console.WriteLine(desk.ToString());
+                        cart.AddToCart(desk);
                         Console.ReadKey();
 
                         break;

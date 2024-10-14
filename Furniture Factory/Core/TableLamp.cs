@@ -7,19 +7,22 @@ using System.Threading.Tasks;
 
 namespace Furniture_Factory.Core
 {
-    public class Coaster : Furniture
+    public class TableLamp : Furniture
     {
-        public Coaster()
+        public TableLamp()
         {
-            Wood = false;
-            Steel = false;
-            Fabric = true;
+            Wood = true;
+            Steel = true;
+            Fabric = false;
 
-            FabricCost = 25;
-            FabricNeeded = 1;
+            WoodCost = 100;
+            WoodNeeded = 2;
 
-            TypeOfFurniture = TypeOfFurniture.Coaster;
-            Name = "Dining Coasters";
+            SteelCost = 125;
+            SteelNeeded = 10;
+
+            TypeOfFurniture = TypeOfFurniture.TableLamp;
+            Name = "Tablelamp";
         }
         public override string ToString()
         {
@@ -38,7 +41,6 @@ namespace Furniture_Factory.Core
             if (Fabric)
                 description.AppendLine("- Fabric");
 
-            description.AppendLine("Note: EXTREMLY FLAMABLE, KEEP AWAY FROM CANDLES!");
             description.AppendLine($"Price: ${CalculateCost():0.00}");
 
             return description.ToString();

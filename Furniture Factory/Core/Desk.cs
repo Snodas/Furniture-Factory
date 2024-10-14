@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace Furniture_Factory.Core
 {
-    public class Cutlery : Furniture
+    public class Desk : Furniture
     {
-        public Cutlery()
+        public Desk()
         {
-            Wood = false;
-            Steel = true;
+            Wood = true;
+            Steel = false;
             Fabric = false;
 
-            SteelCost = 125;
-            SteelNeeded = 20;
+            WoodCost = 125;
+            WoodNeeded = 20;
 
-            TypeOfFurniture = TypeOfFurniture.Cutlery;
-            Name = "Kitchen Cutlery";
+            TypeOfFurniture = TypeOfFurniture.Desk;
+            Name = "Office Desk";
         }
         public override string ToString()
         {
@@ -38,7 +38,6 @@ namespace Furniture_Factory.Core
             if (Fabric)
                 description.AppendLine("- Fabric");
 
-            description.AppendLine("Note: PRODUCT WILL RUST AFTER WASHING");
             description.AppendLine($"Price: ${CalculateCost():0.00}");
 
             return description.ToString();

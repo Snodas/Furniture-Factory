@@ -43,7 +43,6 @@ namespace Furniture_Factory.Core
             if (Fabric)
                 description.AppendLine("- Fabric");
 
-            description.AppendLine("Note: MIGHT FALL FROM CEILING AFTER USE!");
             description.AppendLine($"Price: ${CalculateCost():0.00}");
 
             return description.ToString();
