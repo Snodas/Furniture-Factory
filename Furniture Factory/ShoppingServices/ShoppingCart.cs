@@ -67,15 +67,29 @@ namespace Furniture_Factory.ShoppingServices
         {
             Console.WriteLine("Do you want to proceed to checkout? (yes/no)");
 
-            string checkOutInput = Console.ReadLine();
+            string checkOutInput = Console.ReadLine().ToLower();
 
             if (checkOutInput == "yes")
             {
+                PrintShoppingCart();
 
+                Console.WriteLine("Confirm purchase (yes/no)");
+                string confirmInput = Console.ReadLine().ToLower();
+
+                if (confirmInput == "yes")
+                {
+                    Console.WriteLine("Thank you for your purchase!!!");
+                    Console.WriteLine("The estimated deliverytime is 10 years...");
+                }
+                else
+                {
+                    Console.WriteLine("Purchase cancelled");
+
+                }
             }
             else
             {
-
+                Console.WriteLine("Purchase cancelled");
             }
         }
     }

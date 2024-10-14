@@ -7,6 +7,20 @@ namespace KitchenFurnitureFactory
     {
         static void Main(string[] args)
         {
+            List<Table> tables = new List<Table>
+            {
+                new Table { Name = "Dining Table", AreaOfTable = 30000},
+                new Table { Name = "Coffe Table", AreaOfTable = 12000},
+                new Table { Name = "Dining Table", AreaOfTable = 20000}
+            };
+            
+            List<Lamp> lamps = new List<Lamp>
+            {
+                new Lamp { Name = "Floor Lamp", Current = 180},
+                new Lamp { Name = "Desk Lamp", Current = 40},
+                new Lamp { Name = "Table Lamp", Current = 120}
+            };
+
             bool programRunning = true;
 
             ShoppingCart cart = new ShoppingCart();
@@ -22,7 +36,9 @@ namespace KitchenFurnitureFactory
                 Console.WriteLine("4: Coasters");
                 Console.WriteLine("5: Cutlery");
                 Console.WriteLine("6: Show Cart");
-                Console.WriteLine("7: ");
+                Console.WriteLine("7: Checkout");
+                Console.WriteLine("8: Show all tables");
+                Console.WriteLine("9: Show all lamps");
 
                 int userInput = Convert.ToInt32(Console.ReadLine());
                
@@ -49,7 +65,7 @@ namespace KitchenFurnitureFactory
 
                     case 3:
 
-                        CeilingLamp ceilingLamp = new CeilingLamp();
+                        Lamp ceilingLamp = new Lamp();
                         Console.WriteLine(ceilingLamp.ToString());
                         cart.AddToCart(ceilingLamp);
                         Console.ReadKey();
@@ -84,6 +100,35 @@ namespace KitchenFurnitureFactory
 
                     case 7:
 
+                        Console.Clear();
+                        cart.CheckOut();
+                        Console.ReadKey();
+
+                        break;
+
+                    case 8:
+
+                        Console.Clear();
+                        tables.Sort();
+
+                        foreach(var sortedTables in tables)
+                        {
+                            Console.WriteLine(sortedTables.ToString());
+                        }
+                        
+                        Console.ReadKey();
+                        break;
+
+                    case 9:
+
+                        Console.Clear();
+                        lamps.Sort();
+
+                        foreach (var sortedLamps in lamps)
+                        {
+                            Console.WriteLine(sortedLamps.ToString());
+                        }
+                        Console.ReadKey();
 
                         break;
 
@@ -94,15 +139,38 @@ namespace KitchenFurnitureFactory
                         Console.ReadKey();
 
                         break;
-
-
                 };
-
-
             }
 
 
 
+
+
+
         }
+
+        
+
+
+        //public static void SortTables(List<Table> tables)
+        //{
+        //    var sortedTables = tables.OrderByDescending(table => table.CalculateCost()).ToList();
+
+        //    Console.WriteLine("----Highest Price First----");
+        //    foreach(var table in sortedTables)
+        //    {
+        //        Console.WriteLine(table.ToString());
+        //    }
+        //}
+        //public static void SortLamps(List<Lamp> lamps)
+        //{
+        //    var sortedLamps = lamps.OrderByDescending(table => table.CalculateCost()).ToList();
+
+        //    Console.WriteLine("----Highest Price First----");
+        //    foreach (var table in sortedLamps)
+        //    {
+        //        Console.WriteLine(table.ToString());
+        //    }
+        //}
     }
 }

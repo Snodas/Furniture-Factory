@@ -50,10 +50,7 @@ namespace Furniture_Factory.Core
         }
         public int CompareTo(Table other)
         {
-            if (other == null)
-                return 1;
-
-            return this.AreaOfTable.CompareTo(other.AreaOfTable);
+            return other.AreaOfTable.CompareTo(this.AreaOfTable);
         }
     }
 }

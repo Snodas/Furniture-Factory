@@ -29,7 +29,6 @@ namespace Furniture_Factory.Core
 
         public Furniture()
         { 
-
             WoodCost = 0;
             WoodNeeded = 0;
 

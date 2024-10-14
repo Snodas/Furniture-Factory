@@ -8,11 +8,11 @@ using System.Xml.Linq;
 
 namespace Furniture_Factory.Core
 {
-    public class CeilingLamp : Furniture, IComparable<CeilingLamp>
+    public class Lamp : Furniture, IComparable<Lamp>
     {
         public double Current {  get; set; }
 
-        public CeilingLamp()
+        public Lamp()
         {
             Wood = false;
             Steel = true;
@@ -48,12 +48,9 @@ namespace Furniture_Factory.Core
 
             return description.ToString();
         }
-        public int CompareTo(CeilingLamp other)
+        public int CompareTo(Lamp other)
         {
-            if (other == null)
-                return 1;
-
-            return this.Current.CompareTo(other.Current);
+            return other.Current.CompareTo(this.Current);
         }
     }    
 }
